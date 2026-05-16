@@ -1,0 +1,115 @@
+{% extends 'adminheader.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    {% block content %}
+    <style type="text/css">
+        table,
+        tr,
+        th,
+        td {
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: arial;
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            color: black;
+        }
+
+        th,
+        td {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            font-family: verdana;
+        }
+    </style>
+    <!-- About Start -->
+    <div class="container-fluid about bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-12 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="section-title text-start mb-5">
+                        <h4 class="sub-title pe-3 mb-0">Admin View Students Page</h4>
+                        <table>
+                            <tr>
+                                <th>Staff Id</th>
+                                <th>Student Name</th>
+                                <th>Email Id</th>
+                                <th>Phone Num</th>
+                                <th>Address</th>
+                                <th>Image</th>
+                            </tr>
+                            {% for temp in data %}
+                            <tr>
+                                <td>{{temp.id}}</td>
+                                <td>{{temp.FirstName}} &nbsp; {{temp.LastName}}</td>
+                                <td>{{temp.EmailId}}</td>
+                                <td>{{temp.PhoneNum}}</td>
+                                <td>
+                                    Java Chapters <br>
+                                    Chapter1 : {{temp.JavaChapter1}}
+                                    <br>
+                                    Chapter2 : {{temp.JavaChapter2}}
+                                    <br>
+                                    Chapter3 : {{temp.JavaChapter3}}
+                                    <br>
+                                    Chapter4 : {{temp.JavaChapter4}}
+                                    <br>
+                                    Chapter5 : {{temp.JavaChapter5}}
+                                    <br>
+                                    Chapter6 : {{temp.JavaChapter6}}
+                                    <br>
+                                    Chapter7 : {{temp.JavaChapter7}}
+                                    <br>
+                                    Chapter8 : {{temp.JavaChapter8}}
+                                    <br>
+                                    Chapter9 : {{temp.JavaChapter9}}
+                                    <br>
+                                    Chapter10 : {{temp.JavaChapter10}}
+                                    <br>
+                                    Python Chapters
+                                    <br>
+                                    Chapter1 : {{temp.PythonChapter1}}
+                                    <br>
+                                    Chapter2 : {{temp.PythonChapter2}}
+                                    <br>
+                                    Chapter3 : {{temp.PythonChapter3}}
+                                    <br>
+                                    Chapter4 : {{temp.PythonChapter4}}
+                                    <br>
+                                    Chapter5 : {{temp.PythonChapter5}}
+                                    <br>
+                                    Chapter6 : {{temp.PythonChapter6}}
+                                    <br>
+                                    Chapter7 : {{temp.PythonChapter7}}
+                                    <br>
+                                    Chapter8 : {{temp.PythonChapter8}}
+                                    <br>
+                                    Chapter9 : {{temp.PythonChapter9}}
+                                    <br>
+                                    Chapter10 : {{temp.PythonChapter10}}
+
+                                </td>
+                                <td>
+                                    <img src="/static/img/{{temp.Image}}" width="200px" height="200px" />
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    {% endblock %}
+</body>
+
+</html>

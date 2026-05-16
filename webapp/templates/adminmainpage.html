@@ -1,0 +1,43 @@
+{% extends 'adminheader.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% block content %}
+
+        <!-- About Start -->
+        <div class="container-fluid about bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="about-img pb-5 ps-5">
+                            <img src="/static/img/Pic3.webp" class="img-fluid rounded w-100" style="object-fit: cover;" alt="Image">
+                            <div class="about-img-inner">
+                                <img src="/static/img/Pic3.webp" class="img-fluid rounded-circle w-100 h-100" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
+                        <div class="section-title text-start mb-5">
+                            <h4 class="sub-title pe-3 mb-0 mt-3">About Us</h4>
+                            <!-- <h1 class="display-3 mb-4">We are Ready to Help Improve the Analysis.</h1> -->
+                            <p class="mb-4">
+                                Key Components and Features of an LMS
+                            </p>
+                            <div class="mb-4">
+                                <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> User Management: Allows administrators to enroll users, manage roles, and track progress.</p> 
+                                <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Content Delivery: Supports various formats for online, blended, or instructor-led training.</p> 
+                                <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Reporting & Analytics: Generates reports on completion rates, engagement, and assessment scores.</p> 
+                                <p class="text-secondary"><i class="fa fa-check text-primary me-2"></i> Accessibility: Most modern LMS solutions are cloud-based, enabling access to training materials on various devices.</p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,108 @@
+{% extends 'studentheader.html' %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    {% block content %}
+
+    <!-- About Start -->
+    <div class="container-fluid about bg-light py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                {% if data %}
+                <h3>
+                    You need to look into these <b>{{data}}</b> Chapters
+                </h3>
+                {% else %}
+                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.4s">
+                    <div class="section-title text-start mb-5">
+                        <h4 class="sub-title pe-3 mb-0">Take Test</h4>
+                        {{msg}}
+                        <form action="{% url 'studenttaketest1' %}" method="post" role="form" enctype="multipart/form-data"
+                        style="color: black;">
+                            {%csrf_token%}
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="question1" id="question1" readonly
+                                    value="Who is founder of C-Language">
+                                <br>
+                                <input type="radio" value="1" name="q1" />Dennis Ritchie
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="2" name="q1" />Bjaurne Strousrupt
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="3" name="q1" />Charles Babbage
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="4" name="q1" />Guido Van Rossum
+                            </div>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="question2" id="question2" readonly
+                                    value="Who is founder of C++ Language">
+                                <br>
+                                <input type="radio" value="1" name="q2" />Dennis Ritchie
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="2" name="q2" />Bjaurne Strousrupt
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="3" name="q2" />Charles Babbage
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="4" name="q2" />Guido Van Rossum
+                            </div>
+                            <br>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="question3" id="question3" readonly
+                                    value="Who is founder of Java Language">
+                                <br>
+                                <input type="radio" value="1" name="q3" />Dennis Ritchie
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="2" name="q3" />Bjaurne Strousrupt
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="3" name="q3" />James Gosling
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="4" name="q3" />Guido Van Rossum
+                            </div>
+
+                            <br>
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="question4" id="question4" readonly
+                                    value="Who is founder of Python Language">
+                                <br>
+                                <input type="radio" value="1" name="q4" />Dennis Ritchie
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="2" name="q4" />Bjaurne Strousrupt
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="3" name="q4" />James Gosling
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="4" name="q4" />Guido Van Rossum
+                            </div>
+                            <br>
+
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="question5" id="question5" readonly
+                                    value="Who is founder of Computer">
+                                <br>
+                                <input type="radio" value="1" name="q5" />Dennis Ritchie
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="2" name="q5" />Bjaurne Strousrupt
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="3" name="q5" />Charles Babbage
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" value="4" name="q5" />Guido Van Rossum
+                            </div>
+                            <br>
+                            <div class="text-center">
+                                <input type="submit" style="width: 300px; height: 75px;" value="User Take Test1">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    {% endblock %}
+</body>
+
+</html>

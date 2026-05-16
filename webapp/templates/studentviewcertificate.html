@@ -1,0 +1,43 @@
+{% extends 'StudentHeader.html' %}
+{% load static %}
+{% block content %}
+<style type="text/css">
+    table,
+    tr,
+    th,
+    td {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: arial;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%; color: black;
+    }
+
+    th,
+    td {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-family: verdana;
+    }
+</style>
+<!-- About Start -->
+<div class="container-xxl about mb-5" style="margin-top: 6rem;
+background-image:url('');">
+    <div class="container">
+        <div class="row g-0">
+            <br><br>
+            {% if data %}
+                <h3>
+                    You need to look into these <b>{{data}}</b> Chapters
+                </h3>
+            {% else %}            
+                    <img src="/static/uploads/{{filename}}"
+                    width="800px" height="400px"/>
+            {% endif %}
+        </div>
+    </div>
+    <!-- About End -->
+
+    {% endblock %}

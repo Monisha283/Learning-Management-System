@@ -1,0 +1,113 @@
+{% extends 'commonheader.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+{% block content %}
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb" style="background-image:url('/static/img/Pic4.png');">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h1 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">New Student</h1>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-primary">New Student</li>
+                </ol>
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-5" style="background-color:antiquewhite;">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style mb-4">
+                        <h4 class="sub-title text-white px-3 mb-0">New Student</h4>
+                    </div>
+                </div>
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-5 col-xl-5 contact-form wow fadeInLeft" data-wow-delay="0.1s">
+                        <h2 class="display-5 text-white mb-2">New Student Page</h2>
+                        {{msg}}
+                        <form action="{%url 'newstudent'%}" method="post" enctype="multipart/form-data">
+                            {%csrf_token%}
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent border border-white" id="fname"
+                                               placeholder="First Name" name="fname">
+                                        <label for="fname">First Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent border border-white" id="lname"
+                                               placeholder="First Name" name="lname">
+                                        <label for="lname">Last Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control bg-transparent border border-white" id="email" placeholder="Your Email"
+                                        name="email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent border border-white" id="phone" placeholder="Phone"
+                                        name="phnum">
+                                        <label for="phone">Your Phone</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent border border-white" id="uname" placeholder="Login Name"
+                                        name="uname">
+                                        <label for="email">Login Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control bg-transparent border border-white" id="pwd" placeholder="Password"
+                                        name="pwd">
+                                        <label for="phone">Password</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="file" class="form-control bg-transparent border border-white" id="image" placeholder="Image"
+                                        name="image">
+                                        <label for="image">Image</label>
+                                    </div>
+                                </div>
+                                <!--<div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <select class="form-control bg-transparent border border-white" id="stafftype" name="stafftype">
+                                            <option style="color:black;">Technical</option>
+                                            <option style="color:black;">Non-Technical</option>
+                                        </select>
+                                        <label for="stafftype">Staff Type</label>
+                                    </div>
+                                </div>-->
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control bg-transparent border border-white" placeholder="Leave your address here" id="address"
+                                                  name="address" style="height: 160px"></textarea>
+                                        <label for="address">Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-light text-primary w-100 py-3">New Student</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+{% endblock %}
+</body>
+</html>

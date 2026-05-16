@@ -1,0 +1,91 @@
+{% extends 'studentheader.html' %}
+{% load static %}
+{% block content %}
+<style type="text/css">
+    table,
+    tr,
+    th,
+    td {
+        margin-left: 10px;
+        margin-right: 20px;
+        font-family: arial;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th,
+    td {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-family: verdana;
+    }
+    table tr td a{
+        color: red;
+    }
+</style>
+<!-- About Start -->
+<div class="container-xxl about mb-5" style="margin-top: 6rem;background-image:url('');">
+    <div class="container">
+        <div class="row g-0">
+            <br><br>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="title-box">
+                        <h2>Student View Java Chapter Details</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <table style="margin-left:-100px; font-size: 30px; color: red;">
+                    <tr>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter1.pdf' %}">See Chapter1</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter2.pdf' %}">See Chapter2</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter3.pdf' %}">See Chapter3</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter4.pdf' %}">See Chapter4</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter5.pdf' %}">See Chapter5</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter6.pdf' %}">See Chapter6</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter7.pdf' %}">See Chapter7</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter8.pdf' %}">See Chapter8</a>
+                        </td>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter9.pdf' %}">See Chapter9</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <a href="{% url 'studentviewjavachapters' id='javachapter10.pdf' %}">See Chapter10</a>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,132 @@
+{% extends 'StudentHeader.html' %}
+{% load static %}
+{% block content %}
+<style type="text/css">
+    table,
+    tr,
+    th,
+    td {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: arial;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        color: black;
+    }
+
+    th,
+    td {
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        font-family: verdana;
+    }
+</style>
+<!-- About Start -->
+<div class="container-xxl about mb-5" style="margin-top: 6rem;
+background-image:url('');">
+    <div class="container">
+        <div class="row g-0">
+            <br><br>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="title-box">
+                        <h2>Student View Profile Page</h2>
+                        <br><br>
+                        <table>
+                            <tr>
+                                <th>Student Id</th>
+                                <td>{{temp.id}}</td>
+                            </tr>
+                            <tr>
+                                <th>First Name</th>
+                                <td>{{temp.FirstName}}</td>
+                            </tr>
+                            <tr>
+                                <th>Last Name</th>
+                                <td>{{temp.LastName}}</td>
+                            </tr>
+                            <tr>
+                                <th>Phone Number</th>
+                                <td>{{temp.PhoneNum}}</td>
+                            </tr>
+                            <tr>
+                                <th>Email Id</th>
+                                <td>{{temp.EmailId}}</td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td>{{temp.Address}}</td>
+                            </tr>
+                            <tr>
+                                <th>Java Chapters</th>
+                                <td>
+                                    Chapter1 : {{temp.JavaChapter1}}
+                                    <br>
+                                    Chapter2 : {{temp.JavaChapter2}}
+                                    <br>
+                                    Chapter3 : {{temp.JavaChapter3}}
+                                    <br>
+                                    Chapter4 : {{temp.JavaChapter4}}
+                                    <br>
+                                    Chapter5 : {{temp.JavaChapter5}}
+                                    <br>
+                                    Chapter6 : {{temp.JavaChapter6}}
+                                    <br>
+                                    Chapter7 : {{temp.JavaChapter7}}
+                                    <br>
+                                    Chapter8 : {{temp.JavaChapter8}}
+                                    <br>
+                                    Chapter9 : {{temp.JavaChapter9}}
+                                    <br>
+                                    Chapter10 : {{temp.JavaChapter10}}
+                                </td>
+                            </tr>
+                                                        <tr>
+                                <th>Python Chapters</th>
+                                <td>
+                                    Chapter1 : {{temp.PythonChapter1}}
+                                    <br>
+                                    Chapter2 : {{temp.PythonChapter2}}
+                                    <br>
+                                    Chapter3 : {{temp.PythonChapter3}}
+                                    <br>
+                                    Chapter4 : {{temp.PythonChapter4}}
+                                    <br>
+                                    Chapter5 : {{temp.PythonChapter5}}
+                                    <br>
+                                    Chapter6 : {{temp.PythonChapter6}}
+                                    <br>
+                                    Chapter7 : {{temp.PythonChapter7}}
+                                    <br>
+                                    Chapter8 : {{temp.PythonChapter8}}
+                                    <br>
+                                    Chapter9 : {{temp.PythonChapter9}}
+                                    <br>
+                                    Chapter10 : {{temp.PythonChapter10}}
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <th>Test Result</th>
+                                <td>{{temp.TestResult}}</td>
+                            </tr> -->
+                            <tr>
+                                <th>Profile Picture</th>
+                                <td>
+                                    <img src="/static/img/{{temp.Image}}" width="200px" height="200px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    {% endblock %}
